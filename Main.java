@@ -1,5 +1,6 @@
+import java.util.Scanner;
 /**
- *
+ * calculate the sum from 1 up to that number
  * @author 
  */
 public class Main {
@@ -9,7 +10,23 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // Create scanner for user input
+    Scanner input = new Scanner(System.in);
+    
+    // prompt user to enter a number
+    System.out.println("Please enter a positive integer");
+     int number = input.nextInt();
+     int count = 1;
+     int total = 0;
+     while(count<=number){
+      // print the number we are at
+      System.out.println(count);
+      // to calculate sum
+      total = total + count;
+      // increase number by 1
+      count = count + 1;
+     }
+    System.out.println("The sum from 1 - " + number + " is " + total);
     
   }
 }
